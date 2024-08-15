@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
     );
     return MaterialApp.router(
       routerConfig: AppRouters.router,
-      title: 'SmartIt',
       debugShowCheckedModeBanner: false,
     );
   }

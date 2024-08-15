@@ -17,7 +17,6 @@ class _HomeBodyState extends State<HomeBody> {
   bool val = true;
   String volt = '0';
   String current = '0.0';
-
   final DatabaseReference _databaseReference =
       FirebaseDatabase.instance.ref().child('ESP');
 

@@ -36,7 +36,7 @@ class _VoltageBodyState extends State<VoltageBody> {
             const Text(
               'Home Over/Under Voltage',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.white70,
               ),
