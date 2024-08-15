@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "190990032924",
+    "firebase_url": "https://iot-adapter-54a9a-default-rtdb.firebaseio.com",
+    "project_id": "iot-adapter-54a9a",
+    "storage_bucket": "iot-adapter-54a9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190990032924:android:10576396380d190bc27fd9",
+        "android_client_info": {
+          "package_name": "com.example.iot_adapter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCapzvr4NibG_WJSW4cK6qWSnfwM3RfCws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
