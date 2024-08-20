@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iot_adapter/core/utils/styles.dart';
 import 'package:iot_adapter/core/widgets/main_textfield_card.dart';
-import 'package:iot_adapter/features/current/presentation/manager/current/current_cubit.dart';
+import 'package:iot_adapter/controller/current/current_cubit.dart';
 
 class CurrentBody extends StatefulWidget {
   const CurrentBody({super.key});
@@ -35,11 +36,7 @@ class _CurrentBodyState extends State<CurrentBody> {
             const Spacer(flex: 2),
             const Text(
               'Home Over Current',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.white70,
-              ),
+              style: Styles.mainTitle,
             ),
             const Spacer(flex: 5),
             BlocProvider(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:iot_adapter/core/utils/app_routers.dart';
+import 'package:iot_adapter/core/utils/styles.dart';
 
 class MainCard extends StatelessWidget {
   final String name;
@@ -82,21 +83,13 @@ class MainCard extends StatelessWidget {
                             //Value
                             Text(
                               value,
-                              style: const TextStyle(
-                                fontSize: 40,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                              ),
+                              style: Styles.mainValue,
                             ),
                             const SizedBox(width: 4.0),
                             //signal
                             Text(
                               signal,
-                              style: const TextStyle(
-                                fontSize: 16,
-                                color: Colors.yellow,
-                                fontWeight: FontWeight.w500,
-                              ),
+                              style: Styles.signal,
                             ),
                           ],
                         ),
@@ -109,19 +102,14 @@ class MainCard extends StatelessWidget {
                         Text(
                           'Home',
                           style: TextStyle(
-                            fontSize: 16,
-                            height: 0,
+                            fontSize: 18,
                             color: Colors.grey[100],
                           ),
                         ),
                         //Name
                         Text(
                           name,
-                          style: const TextStyle(
-                            fontSize: 36,
-                            height: 0,
-                            fontWeight: FontWeight.w500,
-                          ),
+                          style: Styles.mainNames,
                         ),
                       ],
                     ),

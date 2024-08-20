@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_adapter/core/utils/styles.dart';
 
 class MainTextFieldCard extends StatelessWidget {
   final TextEditingController controller;
@@ -52,10 +53,7 @@ class MainTextFieldCard extends StatelessWidget {
                   width: MediaQuery.of(context).size.width / 2,
                   child: Text(
                     text,
-                    style: const TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Styles.textFieldTitle,
                   )),
               SizedBox(
                 width: MediaQuery.of(context).size.width / 5,
@@ -65,10 +63,7 @@ class MainTextFieldCard extends StatelessWidget {
                     filled: true,
                     fillColor: Colors.grey[100],
                     hintText: hint,
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 20,
-                    ),
+                    hintStyle: Styles.textFieldHint,
                     contentPadding: const EdgeInsets.all(8.0),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -80,6 +75,7 @@ class MainTextFieldCard extends StatelessWidget {
                     color: Colors.grey[800],
                   ),
                   onSubmitted: onSubmitted,
+                  keyboardType: TextInputType.number,
                 ),
               )
             ],

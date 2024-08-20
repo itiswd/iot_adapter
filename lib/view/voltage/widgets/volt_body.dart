@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iot_adapter/controller/voltage/voltage_cubit.dart';
+import 'package:iot_adapter/core/utils/styles.dart';
 import 'package:iot_adapter/core/widgets/main_textfield_card.dart';
-import 'package:iot_adapter/features/voltage/presentation/manager/cubit/voltage_cubit.dart';
 
 class VoltageBody extends StatefulWidget {
   const VoltageBody({super.key});
@@ -35,11 +36,7 @@ class _VoltageBodyState extends State<VoltageBody> {
             const Spacer(flex: 2),
             const Text(
               'Home Over/Under Voltage',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.white70,
-              ),
+              style: Styles.mainTitle,
             ),
             const Spacer(flex: 5),
             BlocProvider(
@@ -59,14 +56,15 @@ class _VoltageBodyState extends State<VoltageBody> {
                         },
                       ),
                       MainTextFieldCard(
-                          controller: context.read<VoltageCubit>().oVController,
-                          text: 'Over Voltage',
-                          hint: context.read<VoltageCubit>().oVoltVal,
-                          onSubmitted: (value) {
-                            context
-                                .read<VoltageCubit>()
-                                .onSubmittedOver(value, false);
-                          })
+                        controller: context.read<VoltageCubit>().oVController,
+                        text: 'Over Voltage',
+                        hint: context.read<VoltageCubit>().oVoltVal,
+                        onSubmitted: (value) {
+                          context
+                              .read<VoltageCubit>()
+                              .onSubmittedOver(value, false);
+                        },
+                      )
                     ],
                   );
                 },

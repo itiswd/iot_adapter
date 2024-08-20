@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iot_adapter/controller/voltage/voltage_cubit.dart';
 import 'package:iot_adapter/core/widgets/main_float_action_button.dart';
-import 'package:iot_adapter/features/voltage/presentation/manager/cubit/voltage_cubit.dart';
-import 'package:iot_adapter/features/voltage/presentation/views/widgets/volt_body.dart';
+
 import 'package:iot_adapter/main.dart';
+import 'package:iot_adapter/view/voltage/widgets/volt_body.dart';
 
 class VoltageView extends StatelessWidget {
   const VoltageView({super.key});
@@ -29,6 +30,22 @@ class VoltageView extends StatelessWidget {
                         prefs.getString('uVolt') ?? '0',
                         true,
                       );
+                  // Show a snackbar
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Center(
+                        child: Text(
+                          'Data submitted',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.green,
+                          ),
+                        ),
+                      ),
+                      behavior: SnackBarBehavior.floating,
+                      duration: Duration(milliseconds: 1500),
+                    ),
+                  );
                 },
               );
             },

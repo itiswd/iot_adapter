@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iot_adapter/core/widgets/main_float_action_button.dart';
-import 'package:iot_adapter/features/current/presentation/manager/current/current_cubit.dart';
-import 'package:iot_adapter/features/current/presentation/views/widgets/current_body.dart';
+import 'package:iot_adapter/controller/current/current_cubit.dart';
+import 'package:iot_adapter/view/current/widgets/current_body.dart';
 import 'package:iot_adapter/main.dart';
 
 class CurrentView extends StatelessWidget {
@@ -25,6 +25,22 @@ class CurrentView extends StatelessWidget {
                         prefs.getString('oCurrent') ?? '0.0',
                         true,
                       );
+                  // Show a snackbar
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Center(
+                        child: Text(
+                          'Data submitted',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.green,
+                          ),
+                        ),
+                      ),
+                      behavior: SnackBarBehavior.floating,
+                      duration: Duration(milliseconds: 1500),
+                    ),
+                  );
                 },
               );
             },

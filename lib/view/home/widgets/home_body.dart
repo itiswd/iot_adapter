@@ -66,7 +66,9 @@ class _HomeBodyState extends State<HomeBody> {
                     },
                   );
                 } else {
-                  return const Center(child: CircularProgressIndicator());
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
                 }
               },
             ),

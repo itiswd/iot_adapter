@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
-import 'package:iot_adapter/features/current/presentation/views/current_view.dart';
-import 'package:iot_adapter/features/home/presentation/views/home_view.dart';
-import 'package:iot_adapter/features/voltage/presentation/views/voltage_view.dart';
+import 'package:iot_adapter/view/current/current_view.dart';
+import 'package:iot_adapter/view/home/home_view.dart';
+import 'package:iot_adapter/view/voltage/voltage_view.dart';
 
 abstract class AppRouters {
   static const kVolt = '/volt';
