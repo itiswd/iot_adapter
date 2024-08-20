@@ -20,7 +20,7 @@ class CurrentView extends StatelessWidget {
             builder: (context, state) {
               return MainFloatActionButton(
                 image: 'assets/images/upload.png',
-                onPressed: () {
+                onPressed: () async {
                   context.read<CurrentCubit>().onSubmitted(
                         prefs.getString('oCurrent') ?? '0.0',
                         true,
